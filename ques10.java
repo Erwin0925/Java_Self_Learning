@@ -1,11 +1,12 @@
-//Write a Java program to get the preorder traversal of the values of the nodes in a binary tree.
+// Write a Java program to get the in-order traversal of its nodes' values in a binary tree.
 //-----------------------------------------------------------------------------------//
-//Example:
-//    10
-//   /  \
-//  20  30
-//  / \  
-// 40 50 
+//     10
+//    / \
+//   20   30
+//  / \
+// 40   50
+// Example:{10, 20, 30, 40, 50}
+// Output: 40 20 50 10 30
 //-----------------------------------------------------------------------------------//
 
 class Node{
@@ -18,25 +19,25 @@ class Node{
     }
 }
 
-public class ques9_II{
+public class ques10{
 
     Node root;
 
-    void preorderTraversal(Node node){
+    void inOrderTraversal(Node node){
         if(node == null){
             return;
         }
 
+        inOrderTraversal(node.left);
+
         System.out.print(node.key + " ");
 
-        preorderTraversal(node.left);
-
-        preorderTraversal(node.right);
-
+        inOrderTraversal(node.right);
     }
-    public static void main(String[] args) {
 
-        ques9_II tree = new ques9_II();
+
+    public static void main(String[] args) {
+        ques10 tree = new ques10();
 
         tree.root = new Node(10);
         tree.root.left = new Node(20);
@@ -44,7 +45,7 @@ public class ques9_II{
         tree.root.left.left = new Node(40);
         tree.root.left.right = new Node(50);
 
-        tree.preorderTraversal(tree.root);
- 
-    }
+        tree.inOrderTraversal(tree.root);
+        
+    }  
 }
