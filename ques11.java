@@ -1,11 +1,10 @@
-
-
+//Write a Java program to get the Postorder traversal of its nodes' values in a binary tree.
 //     10
 //    / \
 //   20   30
 //  / \
 // 40   50
-// Output: 
+// Output: 40 50 20 30 10 
 //-----------------------------------------------------------------------------------//
 
 class Node{
