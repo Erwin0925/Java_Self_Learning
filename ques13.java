@@ -17,20 +17,22 @@ class ListNode{
 public class ques13 {
     public static void main(String[] args) {
         ques13 obj = new ques13();
-        Scanner input = new Scanner(System.in);
-
-        ListNode head = obj.createlinklist();
-
-        System.out.println("Original List : ");
-        obj.printer(head);
-
-        System.out.print("Enter the number index that wanted to remove(count from end): ");
-        int num = input.nextInt();
-
-        ListNode newhead = obj.removeNthfromEnd(head,num);
-
-        System.out.println("Modified List : ");
-        obj.printer(newhead);
+        try (Scanner input = new Scanner(System.in)) {
+            ListNode head = obj.createlinklist();
+            
+            System.out.println("Original List : ");
+            obj.printer(head);
+            
+            System.out.print("Enter the number index that wanted to remove(count from end): ");
+            int num = input.nextInt();
+            
+            ListNode newhead = obj.removeNthfromEnd(head,num);
+            
+            System.out.println("Modified List : ");
+            obj.printer(newhead);
+        }catch(Exception e){
+            System.out.println("Enter a valid input");   
+        }
 
     }
 

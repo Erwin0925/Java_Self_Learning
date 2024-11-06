@@ -19,18 +19,20 @@ public class ques5_II {
         System.out.println("--------------------------------");
         System.out.print("Please enter your choice (1-4): ");
 
-        Scanner input = new Scanner(System.in);
-        int choice = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            int choice = input.nextInt();
 
-        ques5_II que = new ques5_II();
-        System.out.println(que.dateformat(choice));
+            ques5_II que = new ques5_II();
+            System.out.println(que.dateformat(choice));
+        }catch(Exception e){
+            System.out.println("Enter a valid input");   
+        }
         
     }
 
     private String dateformat(int datefm){
 
         HashMap<Integer,DateTimeFormatter> Dateformat = new HashMap<>();
-        String datetime;
 
         Dateformat.put(1, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         Dateformat.put(2, DateTimeFormatter.ofPattern("yyyy/MM/dd"));

@@ -18,18 +18,20 @@ public class ques5_I{
         System.out.println("--------------------------------");
         System.out.print("Please enter your choice (1-4): ");
 
-        Scanner input = new Scanner(System.in);
-        int choice = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            int choice = input.nextInt();
 
-        ques5_I que = new ques5_I();
-        System.out.println(que.dateformat(choice));
+            ques5_I que = new ques5_I();
+            System.out.println(que.dateformat(choice));
+        }catch(Exception e){
+            System.out.println("Enter a valid input");   
+        }
         
     }
 
     private String dateformat(int datefm){
 
         LocalDateTime dt = LocalDateTime.now();
-        String datetime;
 
         DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("yyyy/MM/dd");
@@ -38,23 +40,12 @@ public class ques5_I{
         
 
 
-        switch (datefm) {
-            case 1:
-                datetime = dt.format(dtf1);
-                break;
-            case 2:
-                datetime = dt.format(dtf2);
-                break;
-            case 3:
-                datetime = dt.format(dtf3);
-                break;
-            case 4:
-                datetime = dt.format(dtf4);
-                break;                
-            default:
-                datetime = "Invalid choice. Please select a valid option.";
-                break;
-        }
-        return datetime;
+        return switch (datefm) {
+            case 1 -> dt.format(dtf1);
+            case 2 -> dt.format(dtf2);
+            case 3 -> dt.format(dtf3);
+            case 4 -> dt.format(dtf4);
+            default -> "Invalid choice. Please select a valid option.";
+        };
     }
 }

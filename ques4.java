@@ -11,14 +11,16 @@ public class ques4 {
 
 
 
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("Enter a poem in all small letter :");
+            String name = input.nextLine();
 
-        System.out.println("Enter a poem in all small letter :");
-        String name = input.nextLine();
+            var name2 = name.split(" ");
 
-        var name2 = name.split(" ");
-
-        System.out.print(capitalize(name2));
+            System.out.print(capitalize(name2));
+        }catch(Exception e){
+            System.out.println("Enter a valid input");   
+        }
     
     }
 

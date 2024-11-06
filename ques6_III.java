@@ -9,17 +9,19 @@ import java.util.Scanner;
 
 public class ques6_III {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a word :");
+            String word = input.next();
+            String newword = "";
 
-        System.out.print("Enter a word :");
-        String word = input.next();
-        String newword = "";
+            for (int i = 0; i < word.length(); i++) {
+                newword = word.charAt(i) + newword;
+            }
 
-        for (int i = 0; i < word.length(); i++) {
-            newword = word.charAt(i) + newword;
+            System.out.print(newword);
+        }catch(Exception e){
+            System.out.println("Enter a valid input");   
         }
-
-        System.out.print(newword);
 
     }
     
