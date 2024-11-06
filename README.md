@@ -40,19 +40,23 @@ Write a Java program to get the preorder traversal of the values of the nodes in
 
 ### 10. In-Order Traversal of a Binary Tree
 Write a Java program to get the in-order traversal of its nodes' values in a binary tree.
+```
     10
    /  \
   20  30
  / \  
-40 50 
+40 50
+```
 
 ### 11. Postorder Traversal of a Binary Tree
 Write a Java program to get the postorder traversal of its nodes' values in a binary tree.
+```
     10
    /  \
   20  30
  / \  
-40 50 
+40 50
+```
 
 ### 12. Find Unique Element in an Array
 Write a Java program to find a number that appears only once in a given array of integers where all other numbers occur twice.
@@ -75,3 +79,6 @@ Write a Java program to create a class called `Book` with instance variables `ti
 
 ### 17. Constructor Chaining
 Write a Java program to create a class called `Student` with instance variables `studentId`, `studentName`, and `grade`. Implement a default constructor and a parameterized constructor that takes all three instance variables. Use constructor chaining to initialize the variables.
+
+### 18. Book Class with Collection Management
+Write a Java program to create a class called `Book` with attributes for `title`, `author`, and `ISBN`, and methods to add and remove books from a collection.
