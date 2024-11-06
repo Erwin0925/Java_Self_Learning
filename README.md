@@ -30,11 +30,13 @@ Write a Java program to check if an array of integers contains three increasing 
 
 ### 9. Preorder Traversal of a Binary Tree
 Write a Java program to get the preorder traversal of the values of the nodes in a binary tree.
+```
     10
    /  \
   20  30
  / \  
-40 50 
+40 50
+```
 
 ### 10. In-Order Traversal of a Binary Tree
 Write a Java program to get the in-order traversal of its nodes' values in a binary tree.
