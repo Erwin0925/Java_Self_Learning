@@ -4,8 +4,6 @@
 // Print the values of the variables.
 //-----------------------------------------------------------------------------------//
 
-
-
 public class ques14 {
     public static void main(String[] args) {
         ques14Cat cat = new ques14Cat();

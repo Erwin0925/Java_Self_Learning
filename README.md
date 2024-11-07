@@ -82,3 +82,18 @@ Write a Java program to create a class called `Student` with instance variables 
 
 ### 18. Book Class with Collection Management
 Write a Java program to create a class called `Book` with attributes for `title`, `author`, and `ISBN`, and methods to add and remove books from a collection.
+
+### 19. Constructor with Validation
+Write a Java program to create a class called Account with instance variables accountNumber and balance. Implement a parameterized constructor that initializes these variables with validation:
+    - accountNumber should be non-null and non-empty.
+    - balance should be non-negative.
+    - Print an error message if the validation fails.
+
+### 20. Constructor with Array Initialization
+Write a Java program to create a class called Classroom with instance variables className and students (an array of strings). 
+Implement a parameterized constructor that initializes these variables. Print the values of the variables.
+
+### 21. Constructor for Singleton Pattern
+Write a Java program to create a class called Singleton that ensures only one instance of the class can be created. 
+Implement a private constructor and a public static method to get the single instance of the class. 
+Print a message indicating the creation of the instance.
