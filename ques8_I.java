@@ -1,4 +1,5 @@
 // Write a Java program to check if an array of integers contains three increasing adjacent numbers.
+//-----------------------------------------------------------------------------------//
 import java.util.Scanner;
 
 public class ques8_I{
