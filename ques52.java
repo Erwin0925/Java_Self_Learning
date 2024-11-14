@@ -1,8 +1,7 @@
-
-import java.util.function.BinaryOperator;
-
 // Write a Java program to implement a lambda expression to find the sum of two integers.
 //-----------------------------------------------------------------------------------//
+
+import java.util.function.BinaryOperator;
 
 interface sumCalculator{
     public int sum(int a, int b);
